@@ -1,0 +1,17 @@
+$battle_field $mol_page
+	title \Battle Field
+	body /
+		<= Field $mol_list rows /
+			<= Y $mol_list rows <= y_list /
+				<= X*0 $mol_row sub <= x_list* /
+					<= Cell*0_0 $battle_field_cell
+						attr *
+							active <= cell_active*? false
+							type <= cell_type*? \
+						title <= cell_title* \
+						click? <=> click_cell*? null
+
+
+$battle_field_cell $mol_button_minor
+	x 0
+	y 0
